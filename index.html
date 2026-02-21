@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pioneer Produce | Premium Heirloom Tomatoes</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        tomato: {
+                            600: '#e53935',
+                            700: '#c62828',
+                            800: '#b71c1c',
+                        },
+                        earth: '#faf9f6'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-earth text-stone-800 font-sans antialiased selection:bg-tomato-600 selection:text-white">
+
+    <header class="relative h-[70vh] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1592841200221-a6898f307baa?auto=format&fit=crop&w=2000&q=80" alt="Heirloom Tomatoes" class="w-full h-full object-cover object-center" />
+            <div class="absolute inset-0 bg-stone-900/60 mix-blend-multiply"></div>
+        </div>
+        
+        <div class="relative z-10 text-center px-6">
+            <h1 class="text-6xl md:text-8xl font-serif font-bold text-white mb-6 tracking-tight drop-shadow-lg">Pioneer Produce</h1>
+            <p class="text-xl md:text-2xl text-stone-200 font-light max-w-2xl mx-auto">Cultivating exceptional, field-grown heritage tomatoes for the Ridgefield community.</p>
+        </div>
+    </header>
+
+    <section class="py-24 px-6 max-w-4xl mx-auto text-center">
+        <span class="text-tomato-700 font-semibold tracking-widest uppercase text-sm mb-4 block">Our Philosophy</span>
+        <h2 class="text-4xl md:text-5xl font-serif font-semibold mb-8 text-stone-900">Taste the Difference</h2>
+        <p class="text-lg md:text-xl leading-relaxed text-stone-600 font-light">
+            We believe a tomato should taste like a tomato. We skip the commercial hybrids designed for shipping and focus exclusively on heirloom varieties cultivated for complex, rich, and unforgettable flavor. Grown right here, picked at peak ripeness.
+        </p>
+    </section>
+
+    <section class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-serif font-semibold mb-16 text-center text-stone-900">This Season's Harvest</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                
+                <div class="group cursor-pointer">
+                    <div class="overflow-hidden rounded-xl mb-6 shadow-sm group-hover:shadow-xl transition-all duration-300">
+                        <img src="https://images.unsplash.com/photo-1604543501732-c513cebdf155?auto=format&fit=crop&w=800&q=80" alt="Cherokee Purple" class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-2xl font-serif font-bold mb-2 text-stone-900 group-hover:text-tomato-700 transition-colors">Cherokee Purple</h3>
+                    <p class="text-stone-600 font-light leading-relaxed">Deep, smoky, and complex. The undisputed king of the slicer tomatoes with a beautiful dark hue.</p>
+                </div>
+
+                <div class="group cursor-pointer">
+                    <div class="overflow-hidden rounded-xl mb-6 shadow-sm group-hover:shadow-xl transition-all duration-300">
+                        <img src="https://images.unsplash.com/photo-1592928302636-c83cf1e1c887?auto=format&fit=crop&w=800&q=80" alt="Brandywine" class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-2xl font-serif font-bold mb-2 text-stone-900 group-hover:text-tomato-700 transition-colors">Brandywine</h3>
+                    <p class="text-stone-600 font-light leading-relaxed">The classic pink beefsteak. Perfectly balanced sweetness and acidity that defines the taste of summer.</p>
+                </div>
+
+                <div class="group cursor-pointer">
+                    <div class="overflow-hidden rounded-xl mb-6 shadow-sm group-hover:shadow-xl transition-all duration-300">
+                        <img src="https://images.unsplash.com/photo-1508061452932-d11894d0bc79?auto=format&fit=crop&w=800&q=80" alt="Sun Gold" class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-2xl font-serif font-bold mb-2 text-stone-900 group-hover:text-tomato-700 transition-colors">Sun Gold</h3>
+                    <p class="text-stone-600 font-light leading-relaxed">Bite-sized, bright orange cherry tomatoes that taste like pure summer candy. A market favorite.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 bg-stone-900 text-stone-100 text-center">
+        <h2 class="text-4xl font-serif font-semibold mb-12">Visit the Stand</h2>
+        <div class="max-w-lg mx-auto bg-stone-800 p-12 rounded-2xl shadow-2xl border border-stone-700">
+            <h3 class="text-2xl font-serif font-medium mb-3 text-white">Ridgefield Farmers Market</h3>
+            <p class="text-stone-400 mb-8 text-lg">Downtown Overlook Park</p>
+            
+            <div class="h-px bg-stone-700 w-full mb-8"></div>
+            
+            <div class="flex justify-between items-center mb-4">
+                <span class="font-semibold text-lg text-white">Saturdays</span>
+                <span class="text-tomato-600 font-medium text-lg">9:00 AM - 2:00 PM</span>
+            </div>
+            <p class="text-stone-400 text-sm italic mt-6">Arrive early for the best selection of ripe heirlooms!</p>
+        </div>
+    </section>
+
+    <footer class="bg-stone-950 text-stone-500 py-8 text-center text-sm">
+        <p>&copy; 2026 Pioneer Produce. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
