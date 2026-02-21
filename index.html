@@ -6,7 +6,6 @@
     
     <title>Pioneer Produce | Farm Fresh Tomatoes at Vancouver WA Farmers Market</title>
     <meta name="description" content="Pioneer Produce is a family-owned hydroponic farm in Ridgefield, WA. Find our pesticide-free, vine-ripened Rebelski and Favorita tomatoes at the Vancouver Farmers Market.">
-    <meta name="keywords" content="Pioneer Produce, Vancouver WA Farmers Market, Ridgefield WA farm, hydroponic tomatoes, Rebelski beefsteak, Favorita grape tomatoes, Long English Cucumbers, Clark County WA">
     
     <script type="application/ld+json">
     {
@@ -22,9 +21,7 @@
         "addressRegion": "WA",
         "postalCode": "98660",
         "addressCountry": "US"
-      },
-      "areaServed": ["Vancouver, WA", "Ridgefield, WA", "Clark County, WA"],
-      "priceRange": "$$"
+      }
     }
     </script>
 
@@ -32,6 +29,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;0,800;0,900;1,600&display=swap" rel="stylesheet">
     
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -53,10 +52,16 @@
             }
         }
     </script>
+    <style>
+        /* Organic Paper Texture Overlay */
+        .bg-texture {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+        }
+    </style>
 </head>
-<body class="bg-stone-50 text-stone-900 font-sans antialiased selection:bg-tomato selection:text-white">
+<body class="bg-stone-50 bg-texture text-stone-900 font-sans antialiased selection:bg-tomato selection:text-white overflow-x-hidden">
 
-    <nav class="sticky top-0 z-50 bg-vine-950/95 backdrop-blur-md border-b border-vine-800 py-3 px-4 md:px-8 flex flex-col md:flex-row justify-between items-center shadow-lg">
+    <nav data-aos="fade-down" data-aos-duration="800" class="sticky top-0 z-50 bg-vine-950/95 backdrop-blur-md border-b border-vine-800 py-3 px-4 md:px-8 flex flex-col md:flex-row justify-between items-center shadow-lg">
         <div class="flex items-center gap-3 mb-2 md:mb-0">
             <img src="https://gemini.google.com/share/1bbdcb739146" alt="Pioneer Produce Logo" class="h-8 w-auto">
             <span class="text-xl font-serif font-bold text-white tracking-wide">Pioneer Produce</span>
@@ -68,15 +73,16 @@
         </div>
     </nav>
 
-    <header class="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-vine-900 py-20">
+    <header class="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-vine-900 py-20">
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1592841200221-a6898f307baa?auto=format&fit=crop&w=2000&q=80" alt="Fresh Tomatoes" class="w-full h-full object-cover opacity-30 mix-blend-overlay" />
-            <div class="absolute inset-0 bg-gradient-to-b from-vine-900/50 via-vine-900/80 to-vine-950"></div>
+            <video autoplay loop muted playsinline class="w-full h-full object-cover opacity-40 mix-blend-overlay">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-farmer-walking-in-a-greenhouse-with-a-box-of-tomatoes-41695-large.mp4" type="video/mp4">
+            </video>
+            <div class="absolute inset-0 bg-gradient-to-b from-vine-900/60 via-vine-900/70 to-vine-950"></div>
         </div>
         
-        <div class="relative z-10 text-center px-6 max-w-5xl">
-            <img src="https://gemini.google.com/share/1bbdcb739146" alt="Pioneer Produce Logo" class="h-32 md:h-48 mx-auto mb-8 drop-shadow-2xl hover:scale-105 transition-transform duration-500">
-            
+        <div class="relative z-10 text-center px-6 max-w-5xl" data-aos="zoom-in" data-aos-duration="1200">
+            <img src="https://gemini.google.com/share/1bbdcb739146" alt="Pioneer Produce Logo" class="h-32 md:h-48 mx-auto mb-8 drop-shadow-2xl">
             <h1 class="text-6xl md:text-8xl lg:text-9xl font-serif font-black text-white mb-6 leading-none tracking-tighter drop-shadow-lg">
                 PIONEER<br><span class="text-tomato">PRODUCE</span>
             </h1>
@@ -89,10 +95,10 @@
         </div>
     </header>
 
-    <section class="py-24 px-6 max-w-6xl mx-auto bg-stone-50">
+    <section class="py-24 px-6 max-w-6xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             
-            <div>
+            <div data-aos="fade-right" data-aos-duration="1000">
                 <span class="text-tomato font-bold tracking-widest uppercase text-sm mb-4 block">Our Roots in Ridgefield</span>
                 <h2 class="text-4xl md:text-5xl font-serif font-bold mb-6 text-vine-900">A Family Tradition</h2>
                 <div class="space-y-6 text-lg text-stone-600 font-light leading-relaxed">
@@ -100,7 +106,7 @@
                         Growing incredible produce isn't just our business; it's our family legacy. For over 25 years, Ashley's parents, Sarah and Donald, cultivated this land as Ridgefield Hydrofarm. Today, we—Ashley and Kiley Poole, along with our three kids, Scarlett, Arthur, and Callum—are proud to carry that tradition forward as <strong class="text-vine-900 font-semibold">Pioneer Produce</strong>.
                     </p>
                     <p>
-                        We operate a state-of-the-art, 100% pesticide-free hydroponic greenhouse. By starting our crops in the deep winter, we are able to bring you vibrant, healthy produce from mid-May right through August.
+                        We operate a state-of-the-art, 100% pesticide-free hydroponic greenhouse. By starting our crops in the deep winter, we bring you vibrant, healthy produce from mid-May right through August.
                     </p>
                     <p class="font-medium text-vine-900 border-l-4 border-tomato pl-4 text-xl italic">
                         "We believe a tomato should be picked red, never green. That is why we harvest the exact morning of the market, bringing you true vine-ripened flavor."
@@ -108,10 +114,10 @@
                 </div>
             </div>
 
-            <div class="relative">
+            <div class="relative" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
                 <div class="absolute inset-0 bg-vine-800 transform translate-x-4 translate-y-4 rounded-2xl -z-10"></div>
                 <img src="https://images.unsplash.com/photo-1595841696677-6489ff3f8cd1?auto=format&fit=crop&w=800&q=80" alt="The Poole Family Greenhouse" class="rounded-2xl shadow-xl w-full h-auto object-cover border-4 border-white">
-                <div class="absolute -bottom-8 -left-8 bg-white p-6 rounded-xl shadow-xl border border-stone-100 max-w-xs hidden md:block">
+                <div class="absolute -bottom-8 -left-8 bg-white p-6 rounded-xl shadow-xl border border-stone-100 max-w-xs hidden md:block" data-aos="fade-up" data-aos-delay="600">
                     <p class="font-serif font-bold text-tomato text-xl mb-1">100% Pesticide Free</p>
                     <p class="text-stone-500 text-sm leading-tight">Grown safely and sustainably in our Ridgefield greenhouse.</p>
                 </div>
@@ -120,36 +126,36 @@
         </div>
     </section>
 
-    <section class="py-24 px-6 bg-white border-y border-stone-200">
+    <section class="py-24 px-6 bg-white border-y border-stone-200 bg-texture">
         <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16">
+            <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="800">
                 <h2 class="text-4xl md:text-5xl font-serif font-bold text-vine-900 mb-4">Fresh From The Greenhouse</h2>
                 <p class="text-lg text-stone-600 max-w-2xl mx-auto">Picked this morning. Vine-ripened to absolute perfection. Here is what we are bringing to the market this season.</p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 
-                <div class="bg-stone-50 rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-stone-100 text-center group">
+                <div class="bg-stone-50 rounded-2xl p-8 shadow-sm hover:shadow-2xl transition-all duration-500 border border-stone-100 text-center group" data-aos="fade-up" data-aos-delay="100">
                     <div class="w-40 h-40 mx-auto mb-6 rounded-full overflow-hidden shadow-inner border-4 border-white">
-                        <img src="https://images.unsplash.com/photo-1592928302636-c83cf1e1c887?auto=format&fit=crop&w=400&q=80" alt="Rebelski Beefsteak Tomatoes" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <img src="https://images.unsplash.com/photo-1592928302636-c83cf1e1c887?auto=format&fit=crop&w=400&q=80" alt="Rebelski Beefsteak Tomatoes" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                     </div>
                     <div class="text-tomato font-bold text-sm uppercase tracking-wider mb-2">The Slicer</div>
                     <h3 class="text-2xl font-serif font-bold text-vine-900 mb-3">Rebelski Beefsteaks</h3>
                     <p class="text-stone-600 leading-relaxed font-light">Large, vibrant red, and beautifully ribbed. The ultimate thick-slicing tomato for sandwiches, burgers, and fresh summer salads.</p>
                 </div>
 
-                <div class="bg-stone-50 rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-stone-100 text-center group">
+                <div class="bg-stone-50 rounded-2xl p-8 shadow-sm hover:shadow-2xl transition-all duration-500 border border-stone-100 text-center group" data-aos="fade-up" data-aos-delay="200">
                     <div class="w-40 h-40 mx-auto mb-6 rounded-full overflow-hidden shadow-inner border-4 border-white">
-                        <img src="https://images.unsplash.com/photo-1524593166156-312f362cada0?auto=format&fit=crop&w=400&q=80" alt="Favorita Grape Tomatoes" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <img src="https://images.unsplash.com/photo-1524593166156-312f362cada0?auto=format&fit=crop&w=400&q=80" alt="Favorita Grape Tomatoes" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                     </div>
                     <div class="text-tomato font-bold text-sm uppercase tracking-wider mb-2">The Snack</div>
                     <h3 class="text-2xl font-serif font-bold text-vine-900 mb-3">Favorita Grapes</h3>
                     <p class="text-stone-600 leading-relaxed font-light">Incredibly sweet, bite-sized bursts of flavor. Hand-picked at peak redness for the perfect healthy snack straight out of the pint.</p>
                 </div>
 
-                <div class="bg-stone-50 rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-stone-100 text-center group">
+                <div class="bg-stone-50 rounded-2xl p-8 shadow-sm hover:shadow-2xl transition-all duration-500 border border-stone-100 text-center group" data-aos="fade-up" data-aos-delay="300">
                     <div class="w-40 h-40 mx-auto mb-6 rounded-full overflow-hidden shadow-inner border-4 border-white">
-                        <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=400&q=80" alt="Long English Cucumbers" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=400&q=80" alt="Long English Cucumbers" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                     </div>
                     <div class="text-vine-800 font-bold text-sm uppercase tracking-wider mb-2">The Crunch</div>
                     <h3 class="text-2xl font-serif font-bold text-vine-900 mb-3">Long English Cukes</h3>
@@ -160,17 +166,32 @@
         </div>
     </section>
 
-    <section id="location" class="py-24 px-6 bg-vine-950 text-stone-50 border-t-8 border-tomato">
+    <section class="py-24 px-6 max-w-5xl mx-auto text-center">
+        <h2 class="text-4xl font-serif font-bold text-vine-900 mb-12" data-aos="fade-up">Heard at the Market</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-200 relative" data-aos="fade-up" data-aos-delay="100">
+                <span class="text-6xl text-tomato/20 absolute top-4 left-4 font-serif">"</span>
+                <p class="text-lg text-stone-700 italic relative z-10 mb-4">I literally wait all winter for Pioneer Produce to come back. The Favoritas never make it home; my kids eat the entire pint in the car.</p>
+                <p class="font-bold text-vine-900">— Sarah M., Vancouver</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-200 relative" data-aos="fade-up" data-aos-delay="200">
+                <span class="text-6xl text-tomato/20 absolute top-4 left-4 font-serif">"</span>
+                <p class="text-lg text-stone-700 italic relative z-10 mb-4">You can actually taste the difference. Knowing the Poole family picks these the same morning makes them worth every penny.</p>
+                <p class="font-bold text-vine-900">— David R., Local Chef</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="location" class="py-24 px-6 bg-vine-950 text-stone-50 border-t-8 border-tomato bg-texture">
         <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             
-            <div>
-                <img src="https://gemini.google.com/share/1bbdcb739146" alt="Pioneer Produce Logo" class="h-16 w-auto mb-6 opacity-80">
+            <div data-aos="fade-right">
                 <h2 class="text-4xl md:text-5xl font-serif font-bold mb-6 text-white">Find Us at the Market</h2>
                 <p class="text-stone-300 mb-10 text-xl font-light">Come say hi to the Poole family and taste the difference that same-day harvesting makes.</p>
                 
                 <div class="space-y-8">
                     <div class="flex items-start gap-4">
-                        <div class="bg-vine-900 p-4 rounded-xl text-tomato border border-vine-800">
+                        <div class="bg-vine-900 p-4 rounded-xl text-tomato border border-vine-800 shadow-inner">
                             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                         </div>
                         <div>
@@ -180,7 +201,7 @@
                     </div>
                     
                     <div class="flex items-start gap-4">
-                        <div class="bg-vine-900 p-4 rounded-xl text-tomato border border-vine-800">
+                        <div class="bg-vine-900 p-4 rounded-xl text-tomato border border-vine-800 shadow-inner">
                             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         </div>
                         <div>
@@ -195,7 +216,7 @@
                 </div>
             </div>
 
-            <div class="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl border border-vine-800 group">
+            <div class="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl border border-vine-800 group" data-aos="fade-left">
                 <img src="https://images.unsplash.com/photo-1533900298318-6b8da08a523e?auto=format&fit=crop&w=800&q=80" alt="Farmers Market Downtown" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                 <div class="absolute inset-0 bg-gradient-to-t from-vine-950 via-vine-900/40 to-transparent flex items-end p-10">
                     <p class="text-white font-medium text-2xl drop-shadow-md border-l-4 border-tomato pl-4">Look for the Pioneer Produce sign!</p>
@@ -205,10 +226,29 @@
         </div>
     </section>
 
-    <footer class="bg-vine-950 text-stone-500 py-10 text-center text-sm border-t border-vine-900">
+    <section class="bg-tomato py-16 px-6 relative overflow-hidden">
+        <div class="absolute inset-0 bg-texture opacity-20"></div>
+        <div class="max-w-4xl mx-auto text-center relative z-10" data-aos="zoom-in">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-4">Join The First Harvest Waitlist</h2>
+            <p class="text-white/90 text-lg mb-8 max-w-2xl mx-auto">Don't miss out on opening weekend. Drop your email below, and we'll notify you the moment we pack the truck for our first Vancouver market in May.</p>
+            <form class="flex flex-col md:flex-row gap-4 justify-center max-w-xl mx-auto">
+                <input type="email" placeholder="Your email address" required class="px-6 py-4 rounded-full w-full focus:outline-none focus:ring-4 focus:ring-white/50 text-stone-900 shadow-lg">
+                <button type="submit" class="bg-vine-950 text-white font-bold px-8 py-4 rounded-full hover:bg-vine-900 transition-colors shadow-lg whitespace-nowrap">Notify Me</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-vine-950 text-stone-500 py-10 text-center text-sm">
         <p class="mb-2">&copy; 2026 Pioneer Produce. Grown with love in Ridgefield, Washington.</p>
         <p>100% Pesticide Free | Family Owned & Operated</p>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true, // Animations happen only once while scrolling down
+            offset: 50, // Offset (in px) from the original trigger point
+        });
+    </script>
 </body>
 </html>
