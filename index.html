@@ -226,10 +226,12 @@
         <div class="max-w-4xl mx-auto text-center" data-aos="zoom-in">
             <h2 class="text-4xl md:text-5xl font-serif font-bold text-white mb-6 drop-shadow-md">Join The First Harvest Waitlist</h2>
             <p class="text-white/95 text-xl mb-10 max-w-2xl mx-auto font-light leading-relaxed">Don't miss out on opening weekend. Drop your email below, and we'll notify you the exact moment we pack the truck for our first Vancouver market in May.</p>
-            <form action="https://formsubmit.co/ashley@pioneerproducewa.com" method="POST" class="flex flex-col md:flex-row gap-4 justify-center max-w-2xl mx-auto">
+            <form action="https://api.web3forms.com/submit" method="POST" class="flex flex-col md:flex-row gap-4 justify-center max-w-2xl mx-auto">
+                <input type="hidden" name="access_key" value="4ca655ff-80e3-478b-82ca-4b1549c9e766">
+                <input type="hidden" name="subject" value="New Pioneer Produce Waitlist Signup">
+                <input type="hidden" name="from_name" value="Pioneer Produce Website">
                 <input type="email" name="email" placeholder="Your email address" required class="px-8 py-5 rounded-full w-full focus:outline-none focus:ring-4 focus:ring-white/50 text-stone-900 shadow-2xl text-lg font-medium">
-                <input type="hidden" name="_subject" value="New Pioneer Produce Waitlist Signup">
-                <input type="hidden" name="_captcha" value="false">
+                <input type="checkbox" name="botcheck" class="hidden" style="display:none">
                 <button type="submit" class="bg-vine-950 text-white font-bold px-10 py-5 rounded-full hover:bg-vine-900 transition-colors shadow-2xl whitespace-nowrap text-lg tracking-wide uppercase">Notify Me</button>
             </form>
         </div>
