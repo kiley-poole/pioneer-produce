@@ -226,14 +226,14 @@
         <div class="max-w-4xl mx-auto text-center" data-aos="zoom-in">
             <h2 class="text-4xl md:text-5xl font-serif font-bold text-white mb-6 drop-shadow-md">Join The First Harvest Waitlist</h2>
             <p class="text-white/95 text-xl mb-10 max-w-2xl mx-auto font-light leading-relaxed">Don't miss out on opening weekend. Drop your email below, and we'll notify you the exact moment we pack the truck for our first Vancouver market in May.</p>
-            <form action="https://api.web3forms.com/submit" method="POST" class="flex flex-col md:flex-row gap-4 justify-center max-w-2xl mx-auto">
-                <input type="hidden" name="access_key" value="4ca655ff-80e3-478b-82ca-4b1549c9e766">
-                <input type="hidden" name="subject" value="New Pioneer Produce Waitlist Signup">
-                <input type="hidden" name="from_name" value="Pioneer Produce Website">
-                <input type="email" name="email" placeholder="Your email address" required class="px-8 py-5 rounded-full w-full focus:outline-none focus:ring-4 focus:ring-white/50 text-stone-900 shadow-2xl text-lg font-medium">
-                <input type="checkbox" name="botcheck" class="hidden" style="display:none">
-                <button type="submit" class="bg-vine-950 text-white font-bold px-10 py-5 rounded-full hover:bg-vine-900 transition-colors shadow-2xl whitespace-nowrap text-lg tracking-wide uppercase">Notify Me</button>
+            <form id="waitlist-form" class="flex flex-col md:flex-row gap-4 justify-center max-w-2xl mx-auto">
+                <input type="email" id="waitlist-email" placeholder="Your email address" required class="px-8 py-5 rounded-full w-full focus:outline-none focus:ring-4 focus:ring-white/50 text-stone-900 shadow-2xl text-lg font-medium">
+                <input type="checkbox" name="botcheck" id="waitlist-bot" class="hidden" style="display:none">
+                <button type="submit" id="waitlist-btn" class="bg-vine-950 text-white font-bold px-10 py-5 rounded-full hover:bg-vine-900 transition-colors shadow-2xl whitespace-nowrap text-lg tracking-wide uppercase">Notify Me</button>
             </form>
+            <div id="waitlist-success" class="hidden max-w-2xl mx-auto bg-white/20 backdrop-blur rounded-full px-8 py-5 text-white text-xl font-semibold tracking-wide">
+                You're on the list! We'll let you know when we're heading to market.
+            </div>
         </div>
     </section>
 
@@ -247,6 +247,39 @@
         AOS.init({
             once: true,
             offset: 50,
+        });
+
+        document.getElementById('waitlist-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const btn = document.getElementById('waitlist-btn');
+            const email = document.getElementById('waitlist-email');
+            const bot = document.getElementById('waitlist-bot');
+            if (bot.checked) return;
+            btn.disabled = true;
+            btn.textContent = 'Sending...';
+            try {
+                const res = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        access_key: '4ca655ff-80e3-478b-82ca-4b1549c9e766',
+                        subject: 'New Pioneer Produce Waitlist Signup',
+                        from_name: 'Pioneer Produce Website',
+                        email: email.value
+                    })
+                });
+                const data = await res.json();
+                if (data.success) {
+                    document.getElementById('waitlist-form').classList.add('hidden');
+                    document.getElementById('waitlist-success').classList.remove('hidden');
+                } else {
+                    btn.textContent = 'Something went wrong — try again';
+                    btn.disabled = false;
+                }
+            } catch {
+                btn.textContent = 'Something went wrong — try again';
+                btn.disabled = false;
+            }
         });
     </script>
 </body>
