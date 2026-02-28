@@ -58,7 +58,7 @@
 
     <nav data-aos="fade-down" data-aos-duration="800" class="sticky top-0 z-50 bg-vine-950 py-4 px-6 md:px-10 flex flex-col md:flex-row justify-between items-center shadow-2xl border-b border-vine-800">
         <div class="flex items-center gap-4 mb-3 md:mb-0">
-            <img src="logo.png" alt="Pioneer Produce Logo" class="h-10 w-auto">
+            <img src="logo.png" alt="Pioneer Produce Logo" class="h-16 w-auto">
             <span class="text-2xl font-serif font-bold text-white tracking-wide">Pioneer Produce</span>
         </div>
         <div class="text-sm text-stone-300 font-light flex items-center gap-4">
@@ -77,7 +77,7 @@
         </div>
         
         <div class="relative z-10 text-center px-6 max-w-5xl" data-aos="zoom-in" data-aos-duration="1200">
-            <img src="logo.png" alt="Pioneer Produce Logo" class="h-32 md:h-48 mx-auto mb-10 drop-shadow-2xl">
+            <img src="logo.png" alt="Pioneer Produce Logo" class="h-48 md:h-64 mx-auto mb-10 drop-shadow-2xl">
             <h1 class="text-6xl md:text-8xl lg:text-9xl font-serif font-black text-white mb-6 leading-none tracking-tighter drop-shadow-2xl">
                 PIONEER<br><span class="text-tomato">PRODUCE</span>
             </h1>
@@ -226,8 +226,9 @@
         <div class="max-w-4xl mx-auto text-center" data-aos="zoom-in">
             <h2 class="text-4xl md:text-5xl font-serif font-bold text-white mb-6 drop-shadow-md">Join The First Harvest Waitlist</h2>
             <p class="text-white/95 text-xl mb-10 max-w-2xl mx-auto font-light leading-relaxed">Don't miss out on opening weekend. Drop your email below, and we'll notify you the exact moment we pack the truck for our first Vancouver market in May.</p>
-            <form class="flex flex-col md:flex-row gap-4 justify-center max-w-2xl mx-auto">
-                <input type="email" placeholder="Your email address" required class="px-8 py-5 rounded-full w-full focus:outline-none focus:ring-4 focus:ring-white/50 text-stone-900 shadow-2xl text-lg font-medium">
+            <form action="https://formspree.io/f/ashley@pioneerproducewa.com" method="POST" class="flex flex-col md:flex-row gap-4 justify-center max-w-2xl mx-auto">
+                <input type="email" name="email" placeholder="Your email address" required class="px-8 py-5 rounded-full w-full focus:outline-none focus:ring-4 focus:ring-white/50 text-stone-900 shadow-2xl text-lg font-medium">
+                <input type="hidden" name="_subject" value="New Pioneer Produce Waitlist Signup">
                 <button type="submit" class="bg-vine-950 text-white font-bold px-10 py-5 rounded-full hover:bg-vine-900 transition-colors shadow-2xl whitespace-nowrap text-lg tracking-wide uppercase">Notify Me</button>
             </form>
         </div>
